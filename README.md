@@ -2,7 +2,9 @@
 
 [蒸菜](/蒸菜)
 
-待续
+待续，欢迎来交pr，按照已有文章格式就好
+
+文字超大段copy自[《老乡鸡菜品溯源报告》](https://www.lxjchina.com.cn/display.asp?id=4226)，有编辑与整理
 
 指路隔壁 [How To Cook](https://cook.aiurs.co/)
 
