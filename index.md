@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 做饭！
-      link: /README.md
+      link: /readme_web.md
 
 ---
 
