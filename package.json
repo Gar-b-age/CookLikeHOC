@@ -1,0 +1,16 @@
+{
+  "name": "cook-like-hoc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "vitepress": "^1.1.0",
+    "vitepress-auto-navigation": "^0.0.4"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  }
+}
