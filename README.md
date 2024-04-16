@@ -2,6 +2,8 @@
 
 # 像老乡鸡那样做饭
 
+[![link](/tg.jpeg)](https://t.me/cooklikehoc)
+
 - [蒸菜](/蒸菜)
 - [炒菜](/炒菜)
 - [炖菜](/炖菜)
@@ -25,3 +27,7 @@
 
 
 ![pic](/logo.png)
+
+Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=SoilZhu/CookLikeHOC&type=Date)](https://star-history.com/#SoilZhu/CookLikeHOC&Date)
