@@ -26,8 +26,9 @@
 至于为什么仓库名要叫CookLikeHOC，因为直接写Laoxiangji大概不方便阅读，而Home Original Chicken是china daily报道中所使用的老乡鸡的英文名，故简写成HOC。
 
 
-![pic](/logo.png)
+![pic](/logo.png) 
 
 Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Gar-b-age/CookLikeHOC&type=Date)](https://star-history.com/#Gar-b-age/CookLikeHOC&Date)
+
