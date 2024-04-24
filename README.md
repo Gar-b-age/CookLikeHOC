@@ -2,7 +2,7 @@
 
 # 像老乡鸡那样做饭
 
-[![link](/tg.jpeg)](https://t.me/cooklikehoc)
+[![link](/tg.png)](https://t.me/cooklikehoc)
 
 - [蒸菜](/蒸菜)
 - [炒菜](/炒菜)
