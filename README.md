@@ -30,4 +30,4 @@
 
 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=SoilZhu/CookLikeHOC&type=Date)](https://star-history.com/#SoilZhu/CookLikeHOC&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Gar-b-age/CookLikeHOC&type=Date)](https://star-history.com/#Gar-b-age/CookLikeHOC&Date)
