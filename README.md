@@ -2,6 +2,10 @@
 
 # 像老乡鸡那样做饭
 
+** 新更新 **
+
+现已上线网页端，[点击访问](https://cooklikehoc.soilzhu.su)
+
 [![link](/tg.png)](https://t.me/cooklikehoc)
 
 - [蒸菜](/蒸菜)
