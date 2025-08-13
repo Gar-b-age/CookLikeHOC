@@ -1,0 +1,7 @@
+:root{
+  --vp-font-family-base: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+
+.VPDoc .VPDocAsideOutline {
+  max-height: calc(100vh - 8rem);
+}
