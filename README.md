@@ -1,9 +1,26 @@
 ![pic](/banner.png)
 
 # 像老乡鸡那样做饭
-这是vitepress分支
 
-访问 cooklikehoc.soilzhu.su
+**新更新**
+
+- 炖菜部分已上线部分由ai配图的菜品，欢迎大家来贡献实拍图
+
+- 现已上线网页端，[点击访问](https://cooklikehoc.soilzhu.su)
+
+[![link](/tg.png)](https://t.me/cooklikehoc)
+
+《老乡鸡菜品溯源报告》中公布的所有菜品已经全部录入完，欢迎大家查阅和补充。
+
+文字超大段copy自[《老乡鸡菜品溯源报告》](https://www.lxjchina.com.cn/display.asp?id=4226)，有编辑与整理
+
+指路隔壁 [How To Cook](https://cook.aiurs.co/)
+
+至于为什么仓库名要叫CookLikeHOC，因为直接写Laoxiangji大概不方便阅读，而Home Original Chicken是china daily报道中所使用的老乡鸡的英文名，故简写成HOC。
+
+Contributor
+
+![cr](https://contrib.rocks/image?repo=Gar-b-age/CookLikeHOC)
 
 Logo
 ![pic](/logo.png) 
