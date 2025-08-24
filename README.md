@@ -2,9 +2,11 @@
 
 # 像老乡鸡那样做饭
 
-** 新更新 **
+**新更新**
 
-现已上线网页端，[点击访问](https://cooklikehoc.soilzhu.su)
+- 炖菜部分已上线部分由ai配图的菜品，欢迎大家来贡献实拍图
+
+- 现已上线网页端，[点击访问](https://cooklikehoc.soilzhu.su)
 
 [![link](/tg.png)](https://t.me/cooklikehoc)
 
