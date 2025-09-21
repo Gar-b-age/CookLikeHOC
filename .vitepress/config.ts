@@ -1,33 +1,64 @@
-import { defineConfig } from 'vitepress'
-import { generateNavAndSidebar } from './navSidebar'
+import { defineConfig } from "vitepress";
+import { generateNavAndSidebar } from "./navSidebar";
 
-const { nav, sidebar } = generateNavAndSidebar(process.cwd())
+const { nav: zhNav, sidebar: zhSidebar } = generateNavAndSidebar(process.cwd());
+const { nav: enNav, sidebar: enSidebar } = generateNavAndSidebar(
+  process.cwd(),
+  "en"
+);
 
 export default defineConfig({
-  lang: 'zh-CN',
-  title: 'CookLikeHOC',
-  description: '像老乡鸡那样做饭',
+  lang: "zh-CN",
+  title: "CookLikeHOC",
+  description: "像老乡鸡那样做饭",
   lastUpdated: true,
   cleanUrls: true,
   themeConfig: {
-    logo: '/logo.png',
+    logo: "/logo.png",
     nav: [
-      { text: '首页', link: '/' },
-      ...nav,
-      { text: 'GitHub', link: 'https://github.com/Gar-b-age/CookLikeHOC' },
+      { text: "首页", link: "/" },
+      ...zhNav,
+      { text: "GitHub", link: "https://github.com/Gar-b-age/CookLikeHOC" },
     ],
-    sidebar,
+    sidebar: zhSidebar,
     search: {
-      provider: 'local'
+      provider: "local",
     },
     outline: [2, 3],
     docFooter: {
-      prev: '上一页',
-      next: '下一页',
+      prev: "上一页",
+      next: "下一页",
     },
-    lastUpdatedText: '上次更新',
+    lastUpdatedText: "上次更新",
+  },
+  locales: {
+    root: {
+      label: "简体中文",
+      lang: "zh-CN",
+    },
+    en: {
+      label: "English",
+      lang: "en",
+      link: "/en/",
+      title: "CookLikeHOC",
+      description: "Cook like HOC - Traditional Chinese recipes",
+      themeConfig: {
+        nav: [
+          { text: "Home", link: "/en/" },
+          ...enNav,
+          { text: "GitHub", link: "https://github.com/Gar-b-age/CookLikeHOC" },
+        ],
+        sidebar: enSidebar,
+        outline: [2, 3],
+        docFooter: {
+          prev: "Previous",
+          next: "Next",
+        },
+        lastUpdatedText: "Last Updated",
+      },
+    },
   },
   vite: {
     server: { host: true },
   },
-})
+});

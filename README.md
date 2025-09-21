@@ -26,13 +26,9 @@
 
 指路隔壁 [How To Cook](https://cook.aiursoft.cn/)
 
-至于为什么仓库名要叫 `CookLikeHOC`，因为直接写 *Laoxiangji* 大概不方便阅读，而 Home Original Chicken 是 china daily 报道中所使用的老乡鸡的英文名，故简写成 HOC。
-
-
+至于为什么仓库名要叫 `CookLikeHOC`，因为直接写 _Laoxiangji_ 大概不方便阅读，而 Home Original Chicken 是 china daily 报道中所使用的老乡鸡的英文名，故简写成 HOC。
 
 [老乡鸡是什么？](https://lxjchina.com.cn/)
-
-
 
 Contributor
 

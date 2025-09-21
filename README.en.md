@@ -26,13 +26,9 @@ The text is largely copied from [《老乡鸡菜品溯源报告》](https://www.
 
 Point to the neighbor [How To Cook](https://cook.aiursoft.cn/)
 
-Regarding the reason why the repository name is `CookLikeHOC`, because writing *Laoxiangji* might pose readability issues for some, and Home Original Chicken is the English name used in China Daily's report on *Laoxiangji* , hence abbreviated as HOC.
-
-
+Regarding the reason why the repository name is `CookLikeHOC`, because writing _Laoxiangji_ might pose readability issues for some, and Home Original Chicken is the English name used in China Daily's report on _Laoxiangji_ , hence abbreviated as HOC.
 
 [What is the HOC or Laoxiangji？](https://lxjchina.com.cn/)
-
-
 
 Contributor
 
