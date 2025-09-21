@@ -5,7 +5,7 @@ hero:
   text: 像老乡鸡那样做饭
   tagline: 文字来自《老乡鸡菜品溯源报告》，并做归纳、编辑与整理
   image:
-    src: /logo.png
+    src: /banner.png
     alt: 像老乡鸡那样做饭
   actions:
     - theme: brand
