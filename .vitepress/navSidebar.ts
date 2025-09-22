@@ -42,7 +42,7 @@ export function generateNavAndSidebar(rootDir: string) {
 
   for (const dir of sections) {
     const abs = path.join(rootDir, dir)
-  const files = fs
+    const files = fs
       .readdirSync(abs)
       .filter((f) => isMarkdown(path.join(abs, f)))
       .sort(sortByPinyinOrName)
@@ -50,8 +50,11 @@ export function generateNavAndSidebar(rootDir: string) {
     // Build sidebar for this section
     const items: SidebarItem[] = files.map((f) => ({
       text: titleFromName(f),
-  link: `/${encodeURI(dir)}/${encodeURI(f)}`,
+      link: `/${encodeURI(dir)}/${encodeURI(f)}`,
     }))
+
+    // Find README.md、readme.md、index.md
+    const readme = ['README.md', 'readme.md', 'index.md'].find((n) => fs.existsSync(path.join(abs, n)))
 
     if (items.length > 0) {
       sidebar[`/${dir}/`] = [
@@ -60,11 +63,12 @@ export function generateNavAndSidebar(rootDir: string) {
           items,
         },
       ]
-
-      // First doc becomes nav link for section
-      nav.push({ text: dir, link: items[0].link! })
+      if (readme) {
+        nav.push({ text: dir, link: `/${encodeURI(dir)}/${encodeURI(readme)}` })
+      } else {
+        nav.push({ text: dir, link: items[0].link! })
+      }
     } else {
-      // Empty section: still show in nav to directory index if exists
       nav.push({ text: dir, link: `/${encodeURI(dir)}/` })
     }
   }
