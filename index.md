@@ -7,7 +7,7 @@ hero:
   actions:
     - theme: brand
       text: 开始浏览
-      link: /炒菜/菠萝咕咾肉
+      link: /炒菜/README
     - theme: alt
       text: GitHub
       link: https://github.com/Gar-b-age/CookLikeHOC
