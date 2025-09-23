@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cooklikehoc-deployment
+  labels:
+    app: cooklikehoc
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cooklikehoc
+  template:
+    metadata:
+      labels:
+        app: cooklikehoc
+    spec:
+      containers:
+      - name: cooklikehoc
+        image: your-docker-registry/cooklikehoc:latest
+        ports:
+        - containerPort: 80
