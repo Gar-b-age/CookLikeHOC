@@ -27,9 +27,8 @@ Contributor
 ![cr](https://contrib.rocks/image?repo=Gar-b-age/CookLikeHOC)
 
 Logo
-![pic](/logo.png) 
+![pic](/logo.png)
 
 Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Gar-b-age/CookLikeHOC&type=Date)](https://star-history.com/#Gar-b-age/CookLikeHOC&Date)
-

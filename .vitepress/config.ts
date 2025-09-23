@@ -18,7 +18,7 @@ export default defineConfig({
     ],
     sidebar,
     search: {
-      provider: 'local'
+      provider: 'local',
     },
     outline: [2, 3],
     docFooter: {
