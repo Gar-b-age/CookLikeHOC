@@ -4,9 +4,10 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-  "prebuild:indexes": "node ./.vitepress/scripts/generate-indexes.mjs",
-  "docs:dev": "npm run prebuild:indexes && vitepress dev .",
-  "docs:build": "npm run prebuild:indexes && vitepress build .",
+    "prebuild:indexes": "node ./.vitepress/scripts/generate-indexes.mjs",
+    "prepare:vercel-output": "node ./scripts/prepare-vercel-output.mjs",
+    "docs:dev": "npm run prebuild:indexes && vitepress dev .",
+    "docs:build": "npm run prebuild:indexes && npm run prepare:vercel-output && vitepress build .",
     "docs:preview": "vitepress preview .",
     "build": "npm run docs:build",
     "start": "npm run docs:dev"
