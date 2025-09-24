@@ -33,9 +33,6 @@ export default defineConfig({
             { text: 'English', link: '/en/' },
           ],
         },
-        search: {
-          provider: 'local',
-        },
         outline: [2, 3],
         docFooter: {
           prev: '上一页',
@@ -66,15 +63,53 @@ export default defineConfig({
             { text: 'English', link: '/en/' },
           ],
         },
-        search: {
-          provider: 'local',
-        },
         outline: [2, 3],
         docFooter: {
           prev: 'Previous',
           next: 'Next',
         },
         lastUpdatedText: 'Last Updated',
+      },
+    },
+  },
+  themeConfig: {
+    search: {
+      provider: 'local',
+      options: {
+        locales: {
+          root: {
+            translations: {
+              button: {
+                buttonText: '搜索文档',
+                buttonAriaLabel: '搜索文档',
+              },
+              modal: {
+                noResultsText: '无法找到相关结果',
+                resetButtonTitle: '清除查询条件',
+                footer: {
+                  selectText: '选择',
+                  navigateText: '切换',
+                },
+              },
+            },
+          },
+          en: {
+            translations: {
+              button: {
+                buttonText: 'Search Docs',
+                buttonAriaLabel: 'Search Docs',
+              },
+              modal: {
+                noResultsText: 'No results for',
+                resetButtonTitle: 'Clear search query',
+                footer: {
+                  selectText: 'to select',
+                  navigateText: 'to navigate',
+                },
+              },
+            },
+          },
+        },
       },
     },
   },
