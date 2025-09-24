@@ -2,7 +2,7 @@
 layout: home
 hero:
   name: CookLikeHOC
-  text: 像老乡鸡那样做饭
+  text: 像老乡鸡那样做饭，AI配图版
   tagline: 文字来自《老乡鸡菜品溯源报告》，并做归纳、编辑与整理
   actions:
     - theme: brand
