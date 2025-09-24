@@ -1,5 +1,5 @@
-import fs from "node:fs";
-import path from "node:path";
+import fs from 'node:fs';
+import path from 'node:path';
 
 export type SidebarItem = {
   text: string;
@@ -8,14 +8,14 @@ export type SidebarItem = {
 };
 export type Sidebar = Record<string, SidebarItem[]>;
 
-const DOC_EXT = [".md"];
+const DOC_EXT = ['.md'];
 const EXCLUDED_DIRS = new Set([
-  ".git",
-  ".github",
-  ".vitepress",
-  "node_modules",
-  "public",
-  "en", // 排除 en 目录，避免在中文版导航中显示
+  '.git',
+  '.github',
+  '.vitepress',
+  'node_modules',
+  'public',
+  'en', // 排除 en 目录，避免在中文版导航中显示
 ]);
 
 function isDirectory(p: string) {
@@ -32,16 +32,16 @@ function isMarkdown(p: string) {
 
 function titleFromName(name: string) {
   // strip extension & use as-is (Chinese names kept)
-  return name.replace(/\.md$/i, "");
+  return name.replace(/\.md$/i, '');
 }
 
 function sortByPinyinOrName(a: string, b: string) {
-  return a.localeCompare(b, "zh-Hans-CN-u-co-pinyin");
+  return a.localeCompare(b, 'zh-Hans-CN-u-co-pinyin');
 }
 
 export function generateNavAndSidebar(
   rootDir: string,
-  localePrefix: string = ""
+  localePrefix: string = ''
 ) {
   const scanDir = localePrefix ? path.join(rootDir, localePrefix) : rootDir;
 
@@ -52,7 +52,7 @@ export function generateNavAndSidebar(
   const entries = fs.readdirSync(scanDir);
   const sections = entries
     .filter((e: string) => isDirectory(path.join(scanDir, e)))
-    .filter((e: string) => !EXCLUDED_DIRS.has(e) && !e.startsWith("."));
+    .filter((e: string) => !EXCLUDED_DIRS.has(e) && !e.startsWith('.'));
   sections.sort(sortByPinyinOrName);
 
   const nav: { text: string; link: string }[] = [];
@@ -68,13 +68,13 @@ export function generateNavAndSidebar(
     // Build sidebar for this section
     const items: SidebarItem[] = files.map((f: string) => ({
       text: titleFromName(f),
-      link: `/${localePrefix}${localePrefix ? "/" : ""}${encodeURI(
+      link: `/${localePrefix}${localePrefix ? '/' : ''}${encodeURI(
         dir
       )}/${encodeURI(f)}`,
     }));
 
     if (items.length > 0) {
-      const sidebarKey = `/${localePrefix}${localePrefix ? "/" : ""}${dir}/`;
+      const sidebarKey = `/${localePrefix}${localePrefix ? '/' : ''}${dir}/`;
       sidebar[sidebarKey] = [
         {
           text: dir,
@@ -88,7 +88,7 @@ export function generateNavAndSidebar(
       // Empty section: still show in nav to directory index if exists
       nav.push({
         text: dir,
-        link: `/${localePrefix}${localePrefix ? "/" : ""}${encodeURI(dir)}/`,
+        link: `/${localePrefix}${localePrefix ? '/' : ''}${encodeURI(dir)}/`,
       });
     }
   }
