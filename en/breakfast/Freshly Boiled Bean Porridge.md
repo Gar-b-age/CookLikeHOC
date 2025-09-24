@@ -8,7 +8,7 @@
 - Porridge rice
 - Regular rice
 - Glutinous rice
-- Hemp beans or mung beans
+- mung beans
 - Alkali powder
 
 ## Steps
