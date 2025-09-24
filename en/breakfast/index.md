@@ -1,0 +1,25 @@
+# Breakfast
+
+<!-- AUTO-GENERATED: index for Breakfast. Edit source files instead. -->
+
+- [Adzuki Bean Porridge with Yuanxiao](./Adzuki%20Bean%20Porridge%20with%20Yuanxiao.md)
+- [Beef Box](./Beef%20Box.md)
+- [Boiled Eggs](./Boiled%20Eggs.md)
+- [Chicken Juice Soup Dumplings](./Chicken%20Juice%20Soup%20Dumplings.md)
+- [Ci Fan Cake](./Ci%20Fan%20Cake.md)
+- [Crispy Beef Patties](./Crispy%20Beef%20Patties.md)
+- [Crispy Flaky Radish Shred Pie](./Crispy%20Flaky%20Radish%20Shred%20Pie.md)
+- [Custard Chicken Buns](./Custard%20Chicken%20Buns.md)
+- [Egg Pancake](./Egg%20Pancake.md)
+- [Flower Rolls](./Flower%20Rolls.md)
+- [Freshly Boiled Bean Porridge](./Freshly%20Boiled%20Bean%20Porridge.md)
+- [Freshly Fried Large Youtiao](./Freshly%20Fried%20Large%20Youtiao.md)
+- [Handmade Shaomai](./Handmade%20Shaomai.md)
+- [Handmade Spring Rolls](./Handmade%20Spring%20Rolls.md)
+- [Millet Pumpkin Porridge](./Millet%20Pumpkin%20Porridge.md)
+- [Rice Balls](./Rice%20Balls.md)
+- [Shepherd's Purse and Fresh Pork Steamed Dumplings](./Shepherd's%20Purse%20and%20Fresh%20Pork%20Steamed%20Dumplings.md)
+- [Steamed Buns-1](./Steamed%20Buns-1.md)
+- [Steamed Buns](./Steamed%20Buns.md)
+- [Tea Eggs](./Tea%20Eggs.md)
+- [White Rice Porridge](./White%20Rice%20Porridge.md)
