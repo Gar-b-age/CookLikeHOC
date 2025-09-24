@@ -2,14 +2,24 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 const DOC_EXT = ['.md']
-const EXCLUDED_DIRS = new Set(['.git', '.github', '.vitepress', 'node_modules', 'public'])
+const EXCLUDED_DIRS = new Set([
+  '.git',
+  '.github',
+  '.vitepress',
+  'node_modules',
+  'public',
+])
 
 function isDirectory(p) {
   return fs.existsSync(p) && fs.statSync(p).isDirectory()
 }
 
 function isMarkdown(p) {
-  return fs.existsSync(p) && fs.statSync(p).isFile() && DOC_EXT.includes(path.extname(p))
+  return (
+    fs.existsSync(p) &&
+    fs.statSync(p).isFile() &&
+    DOC_EXT.includes(path.extname(p))
+  )
 }
 
 function titleFromName(name) {
@@ -32,7 +42,9 @@ export function generateNavAndSidebar(rootDir) {
 
   for (const dir of sections) {
     const abs = path.join(rootDir, dir)
-  const readme = ['README.md', 'readme.md', 'index.md'].find((n) => fs.existsSync(path.join(abs, n)))
+    const readme = ['README.md', 'readme.md', 'index.md'].find((n) =>
+      fs.existsSync(path.join(abs, n))
+    )
     const files = fs
       .readdirSync(abs)
       .filter((f) => isMarkdown(path.join(abs, f)))

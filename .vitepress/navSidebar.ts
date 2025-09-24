@@ -18,7 +18,11 @@ function isDirectory(p: string) {
 }
 
 function isMarkdown(p: string) {
-  return fs.existsSync(p) && fs.statSync(p).isFile() && DOC_EXT.includes(path.extname(p))
+  return (
+    fs.existsSync(p) &&
+    fs.statSync(p).isFile() &&
+    DOC_EXT.includes(path.extname(p))
+  )
 }
 
 function titleFromName(name: string) {
@@ -54,7 +58,9 @@ export function generateNavAndSidebar(rootDir: string) {
     }))
 
     // Find README.md、readme.md、index.md
-    const readme = ['README.md', 'readme.md', 'index.md'].find((n) => fs.existsSync(path.join(abs, n)))
+    const readme = ['README.md', 'readme.md', 'index.md'].find((n) =>
+      fs.existsSync(path.join(abs, n))
+    )
 
     if (items.length > 0) {
       sidebar[`/${dir}/`] = [

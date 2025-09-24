@@ -2,14 +2,24 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 const ROOT = process.cwd()
-const EXCLUDED_DIRS = new Set(['.git', '.github', '.vitepress', 'node_modules', 'public'])
+const EXCLUDED_DIRS = new Set([
+  '.git',
+  '.github',
+  '.vitepress',
+  'node_modules',
+  'public',
+])
 
 function isDirectory(p) {
   return fs.existsSync(p) && fs.statSync(p).isDirectory()
 }
 
 function isMarkdown(p) {
-  return fs.existsSync(p) && fs.statSync(p).isFile() && path.extname(p).toLowerCase() === '.md'
+  return (
+    fs.existsSync(p) &&
+    fs.statSync(p).isFile() &&
+    path.extname(p).toLowerCase() === '.md'
+  )
 }
 
 function sortByPinyinOrName(a, b) {
@@ -50,7 +60,9 @@ function main() {
     const files = fs
       .readdirSync(abs)
       .filter((f) => isMarkdown(path.join(abs, f)))
-      .filter((f) => f.toLowerCase() !== 'readme.md' && f.toLowerCase() !== 'index.md')
+      .filter(
+        (f) => f.toLowerCase() !== 'readme.md' && f.toLowerCase() !== 'index.md'
+      )
       .sort(sortByPinyinOrName)
 
     const readmePath = path.join(abs, 'README.md')
