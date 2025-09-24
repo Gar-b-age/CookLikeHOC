@@ -6,7 +6,7 @@ const { nav, sidebar } = generateNavAndSidebar(process.cwd())
 export default defineConfig({
   lang: 'zh-CN',
   title: 'CookLikeHOC',
-  description: '像老乡鸡那样做饭',
+  description: '像老乡鸡那样做饭，AI配图',
   lastUpdated: true,
   cleanUrls: true,
   themeConfig: {
