@@ -15,7 +15,8 @@ const EXCLUDED_DIRS = new Set([
   '.vitepress',
   'node_modules',
   'public',
-  'en', // 排除 en 目录，避免在中文版导航中显示
+  'en',
+  'images',
 ]);
 
 function isDirectory(p: string) {
