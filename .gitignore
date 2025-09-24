@@ -3,6 +3,3 @@ node_modules/
 .vitepress/dist/
 .DS_Store
 Thumbs.db
-/.vercel
-/scripts/__pycache__
-*.py

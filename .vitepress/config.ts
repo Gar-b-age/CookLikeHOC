@@ -1,14 +1,11 @@
 import { defineConfig } from 'vitepress'
-import path from 'node:path'
 import { generateNavAndSidebar } from './navSidebar'
 
 const rootDir = process.cwd()
-const vercelOutDir = path.resolve(rootDir, '.vercel/output/static')
 const { nav: navZh, sidebar: sidebarZh } = generateNavAndSidebar(rootDir, 'zh')
 const { nav: navEn, sidebar: sidebarEn } = generateNavAndSidebar(rootDir, 'en')
 
 export default defineConfig({
-  outDir: vercelOutDir,
   title: 'CookLikeHOC',
   description: '像老乡鸡那样做饭',
   lastUpdated: true,
