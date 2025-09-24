@@ -2,7 +2,7 @@
 layout: home
 hero:
   name: CookLikeHOC
-  text: Cook Like HOC
+  text: 像老乡鸡一样做菜
   tagline: Recipes from "老乡鸡菜品溯源报告", compiled, edited and organized
   actions:
     - theme: brand
