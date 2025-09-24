@@ -8,11 +8,13 @@
 
 **新更新**
 
-- 炖菜已上线部分由ai配图的菜品，但更欢迎大家来贡献实拍图
+- 欢迎大家来贡献实拍图
 
 - 现已上线网页端，[点击访问](https://cooklikehoc.soilzhu.su)
 
 - Run with Docker? Check it out [here](https://github.com/Gar-b-age/CookLikeHOC/tree/main/docker_support), supported by [@honestAnt](https://github.com/honestAnt) in [PR #141](https://github.com/Gar-b-age/CookLikeHOC/pull/141)
+
+- AI 绘制的手绘图版及AI配图流程版网页： [点击访问](https://ai.cooklikehoc.soilzhu.su), 手绘图由 [@liucongg](https://github.com/liucongg) 贡献，见 [PR #143](https://github.com/Gar-b-age/CookLikeHOC/pull/143)
 
 ---
 
