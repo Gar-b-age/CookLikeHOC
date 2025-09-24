@@ -12,6 +12,10 @@
 
 - 现已上线网页端，[点击访问](https://cooklikehoc.soilzhu.su)
 
+- Run with Docker? Check it out [here](https://github.com/Gar-b-age/CookLikeHOC/tree/main/docker_support), supported by [@honestAnt](https://github.com/honestAnt)
+
+---
+
 [![link](/tg.png)](https://t.me/cooklikehoc)
 
 《老乡鸡菜品溯源报告》中公布的所有菜品已经全部录入完，欢迎大家查阅和补充。
