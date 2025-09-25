@@ -17,6 +17,7 @@ const EXCLUDED_DIRS = new Set([
   'public',
   'en',
   'images',
+  'docker_support',
 ]);
 
 function isDirectory(p: string) {

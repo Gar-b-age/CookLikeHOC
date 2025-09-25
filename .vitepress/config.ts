@@ -16,8 +16,7 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.png',
     nav: [
-      { text: '首页', link: '/' },
-      ...zhNav,
+      { text: '目录', items: [...zhNav] },
       { text: 'GitHub', link: 'https://github.com/Gar-b-age/CookLikeHOC' },
     ],
     sidebar: zhSidebar,
@@ -44,8 +43,7 @@ export default defineConfig({
       description: 'Cook like HOC - Traditional Chinese recipes',
       themeConfig: {
         nav: [
-          { text: 'Home', link: '/en/' },
-          ...enNav,
+          { text: 'Directory', items: [...enNav] },
           { text: 'GitHub', link: 'https://github.com/Gar-b-age/CookLikeHOC' },
         ],
         sidebar: enSidebar,
