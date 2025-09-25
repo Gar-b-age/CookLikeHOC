@@ -1,0 +1,25 @@
+# 早餐
+
+<!-- AUTO-GENERATED: index for 早餐. Edit source files instead. -->
+
+- [White rice porridge](./%E7%99%BD%E7%B1%B3%E7%B2%A5.md)
+- [steamed stuffed bun](./%E5%8C%85%E5%AD%90.md)
+- [Tea eggs](./%E8%8C%B6%E5%8F%B6%E8%9B%8B.md)
+- [Red bean paste Lantern Festival](./%E8%B5%A4%E8%B1%86%E7%B3%8A%E5%85%83%E5%AE%B5.md)
+- [Egg cake](./%E8%9B%8B%E9%A5%BC.md)
+- [Rice ball](./%E9%A5%AD%E5%9B%A2.md)
+- [Flower roll](./%E8%8A%B1%E5%8D%B7.md)
+- [Chicken juice soup buns](./%E9%B8%A1%E6%B1%81%E6%B1%A4%E5%8C%85.md)
+- [Steamed dumplings with fresh meat in shepherd's purse](./%E8%8D%A0%E8%8F%9C%E9%B2%9C%E8%82%89%E8%92%B8%E9%A5%BA.md)
+- [Steamed bun](./%E9%A6%92%E5%A4%B4.md)
+- [Creamy Chicken Bag](./%E5%A5%B6%E9%BB%84%E9%B8%A1%E5%8C%85.md)
+- [Beef box](./%E7%89%9B%E8%82%89%E7%9B%92.md)
+- [Handmade spring rolls](./%E6%89%8B%E5%B7%A5%E6%98%A5%E5%8D%B7.md)
+- [Handmade shredded maize](./%E6%89%8B%E5%B7%A5%E7%83%A7%E9%BA%A6.md)
+- [Boiled eggs](./%E6%B0%B4%E7%85%AE%E8%9B%8B.md)
+- [Shredded Radish Pie](./%E9%85%A5%E7%9A%AE%E8%90%9D%E5%8D%9C%E4%B8%9D%E9%A6%85%E9%A5%BC.md)
+- [Bean porridge](./%E7%8E%B0%E7%86%AC%E8%B1%86%E7%B2%A5.md)
+- [Fried large fried dough sticks](./%E7%8E%B0%E7%82%B8%E5%A4%A7%E6%B2%B9%E6%9D%A1.md)
+- [Crispy beef cake](./%E9%A6%99%E9%85%A5%E7%89%9B%E8%82%89%E9%A5%BC.md)
+- [Millet Pumpkin Porridge](./%E5%B0%8F%E7%B1%B3%E5%8D%97%E7%93%9C%E7%B2%A5.md)
+- [Rice cake](./%E7%B2%A2%E9%A5%AD%E7%B3%95.md)
