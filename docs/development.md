@@ -60,4 +60,8 @@
    npm run docs:dev
    ```
 
-   然后打开浏览器，访问 http://localhost:5173/ 即可。
+   然后打开浏览器，访问 
+   ```
+   http://localhost:5173/ 
+   ```
+   即可。
