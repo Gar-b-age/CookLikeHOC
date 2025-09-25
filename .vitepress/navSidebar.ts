@@ -10,6 +10,8 @@ const EXCLUDED_DIRS = new Set([
   '.github',
   '.vitepress',
   'node_modules',
+  'images',
+  'docker_support',
   'public',
   'docs',
   'images',
