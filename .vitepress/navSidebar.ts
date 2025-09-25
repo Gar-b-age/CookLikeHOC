@@ -11,6 +11,9 @@ const EXCLUDED_DIRS = new Set([
   '.vitepress',
   'node_modules',
   'public',
+  'docs',
+  'images',
+  'docker_support',
 ])
 
 function isDirectory(p: string) {
