@@ -60,17 +60,17 @@ export function generateNavAndSidebar(rootDir: string) {
 
     // Find README.md、readme.md、index.md
     const readme = ['README.md', 'readme.md', 'index.md'].find((n) => fs.existsSync(path.join(abs, n)))
-
+    const readmeURI = readme ? `/${encodeURI(dir)}/${encodeURI(readme)}` : "/";
     if (items.length > 0) {
       sidebar[`/${dir}/`] = [
         {
           text: dir,
-          link: readme ? `/${encodeURI(dir)}/${encodeURI(readme)}` : undefined,
-          items: items.filter((i) => i.link !== (readme ? `/${encodeURI(dir)}/${encodeURI(readme)}` : undefined)),
+          link: readmeURI,
+          items: items.filter((i) => i.link !== readmeURI),
         },
       ]
       if (readme) {
-        nav.push({ text: dir, link: `/${encodeURI(dir)}/${encodeURI(readme)}` })
+        nav.push({ text: dir, link: readmeURI })
       } else {
         nav.push({ text: dir, link: items[0].link! })
       }
