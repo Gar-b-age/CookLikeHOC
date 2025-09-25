@@ -7,10 +7,14 @@ export default defineConfig({
   lang: 'zh-CN',
   title: 'CookLikeHOC',
   description: '像老乡鸡那样做饭',
+  head: [
+    ['link', { rel: 'icon', href: '/logo2.png' }],
+    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
+  ],
   lastUpdated: true,
   cleanUrls: true,
   themeConfig: {
-    logo: '/logo.png',
+    logo: '/logo2.png',
     nav: [
       { text: '首页', link: '/' },
       ...nav,
