@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 
 const ROOT = process.cwd()
-const EXCLUDED_DIRS = new Set(['.git', '.github', '.vitepress', 'node_modules', 'public'])
+const EXCLUDED_DIRS = new Set(['.git', '.github', '.vitepress', 'node_modules', 'public', 'docs', 'images', 'docker_support'])
 
 function isDirectory(p) {
   return fs.existsSync(p) && fs.statSync(p).isDirectory()
