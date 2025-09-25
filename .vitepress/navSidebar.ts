@@ -20,6 +20,7 @@ const EXCLUDED_DIRS = new Set([
   'docker_support',
 ]);
 
+
 function isDirectory(p: string) {
   return fs.existsSync(p) && fs.statSync(p).isDirectory();
 }
