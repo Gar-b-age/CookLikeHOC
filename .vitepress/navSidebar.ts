@@ -65,7 +65,8 @@ export function generateNavAndSidebar(rootDir: string) {
       sidebar[`/${dir}/`] = [
         {
           text: dir,
-          items,
+          link: readme ? `/${encodeURI(dir)}/${encodeURI(readme)}` : undefined,
+          items: items.filter((i) => i.link !== (readme ? `/${encodeURI(dir)}/${encodeURI(readme)}` : undefined)),
         },
       ]
       if (readme) {
