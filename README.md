@@ -1,12 +1,18 @@
 ![pic](/banner.png)
 
+<div align="center">
+
+[**Docker Support**](./docker_support/README.md) | [**Development**](./docs/development.md)
+
+</div>
+
 # 像老乡鸡那样做饭
 
 [**一些说明**](https://github.com/Gar-b-age/CookLikeHOC/issues/26)
 
 仓库主体部分于2024年完工，和2025年9月份的舆论事件无关。截止提交时，仓库的贡献者们与老乡鸡的唯一关系只有消费者和商家的关系。本仓库不是老乡鸡的官方仓库。如果有任何问题或意见建议，欢迎指出
 
-**新更新**
+## 新更新
 
 - 欢迎大家来贡献实拍图
 
@@ -28,14 +34,14 @@
 
 至于为什么仓库名要叫CookLikeHOC，因为直接写Laoxiangji大概不方便阅读，而Home Original Chicken是china daily报道中所使用的老乡鸡的英文名，故简写成HOC。
 
-Contributor
+
+## Contributor
 
 ![cr](https://contrib.rocks/image?repo=Gar-b-age/CookLikeHOC)
 
-Logo
+## Logo
 ![pic](/logo.png) 
 
-Star History
+## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=Gar-b-age/CookLikeHOC&type=Date)](https://star-history.com/#Gar-b-age/CookLikeHOC&Date)
-
