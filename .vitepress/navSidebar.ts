@@ -1,8 +1,10 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import type { DefaultTheme } from 'vitepress'
 
-export type SidebarItem = { text: string; link?: string; items?: SidebarItem[] }
-export type Sidebar = Record<string, SidebarItem[]>
+export type SidebarItem = DefaultTheme.SidebarItem
+export type NavItem = DefaultTheme.NavItem
+export type Sidebar = DefaultTheme.Sidebar
 
 const DOC_EXT = ['.md']
 const EXCLUDED_DIRS = new Set([
@@ -42,8 +44,12 @@ export function generateNavAndSidebar(rootDir: string) {
     .filter((e) => !EXCLUDED_DIRS.has(e) && !e.startsWith('.'))
   sections.sort(sortByPinyinOrName)
 
-  const nav: { text: string; link: string }[] = []
+  const nav: NavItem[] = []
   const sidebar: Sidebar = {}
+
+  // This is the item type we generate from files. It has a required text and link.
+  // It is compatible with both NavItem and SidebarItem.
+  type LinkItem = { text: string; link: string }
 
   for (const dir of sections) {
     const abs = path.join(rootDir, dir)
@@ -52,28 +58,40 @@ export function generateNavAndSidebar(rootDir: string) {
       .filter((f) => isMarkdown(path.join(abs, f)))
       .sort(sortByPinyinOrName)
 
-    // Build sidebar for this section
-    const items: SidebarItem[] = files.map((f) => ({
+    const items: LinkItem[] = files.map((f) => ({
       text: titleFromName(f),
       link: `/${encodeURI(dir)}/${encodeURI(f)}`,
     }))
 
-    // Find README.md、readme.md、index.md
-    const readme = ['README.md', 'readme.md', 'index.md'].find((n) => fs.existsSync(path.join(abs, n)))
-    const readmeURI = readme ? `/${encodeURI(dir)}/${encodeURI(readme)}` : "/";
     if (items.length > 0) {
+      const readme = ['README.md', 'readme.md', 'index.md'].find((n) =>
+        fs.existsSync(path.join(abs, n)),
+      )
+      const readmeURI = readme ? `/${encodeURI(dir)}/${encodeURI(readme)}` : undefined
+
+      let sectionLink: string
+      let sectionItems: LinkItem[]
+
+      if (readmeURI) {
+        sectionLink = readmeURI
+        sectionItems = items.filter((i) => i.link !== readmeURI)
+      } else {
+        sectionLink = items[0].link!
+        sectionItems = items.slice(1)
+      }
+
       sidebar[`/${dir}/`] = [
         {
           text: dir,
-          link: readmeURI,
-          items: items.filter((i) => i.link !== readmeURI),
+          link: sectionLink,
+          items: sectionItems,
         },
       ]
-      if (readme) {
-        nav.push({ text: dir, link: readmeURI })
-      } else {
-        nav.push({ text: dir, link: items[0].link! })
-      }
+
+      nav.push({
+        text: dir,
+        link: sectionLink,
+      })
     } else {
       nav.push({ text: dir, link: `/${encodeURI(dir)}/` })
     }
