@@ -1,7 +1,238 @@
 :root{
   --vp-font-family-base: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  /* Light theme palette */
+  --cl-primary: #0ea5e9; /* sky-500 */
+  --cl-secondary: #7c3aed; /* violet-600 */
+  --cl-accent: #059669; /* emerald-600 */
+  --cl-bg: #f7f8fb;
+  --cl-surface: rgba(255,255,255,.8);
+  --cl-text: #0b1220;
+}
+
+.dark:root{
+  /* Dark theme palette */
+  --cl-primary: #22d3ee; /* cyan-400 */
+  --cl-secondary: #a78bfa; /* violet-400 */
+  --cl-accent: #34d399; /* emerald-400 */
+  --cl-bg: #0b1020;
+  --cl-surface: rgba(16,22,40,.85);
+  --cl-text: rgba(255,255,255,.92);
 }
 
 .VPDoc .VPDocAsideOutline {
   max-height: calc(100vh - 8rem);
 }
+
+/* Light base canvas */
+/* .VPHome {
+  /* Light mode: very gentle tints that fade into white to avoid harsh boundaries */
+  background:
+    radial-gradient(900px 520px at 0% 0%, rgba(14,165,233,.04), transparent 60%),
+    radial-gradient(900px 520px at 100% 100%, rgba(124,58,237,.04), transparent 60%),
+    linear-gradient(180deg, var(--cl-bg) 0%, #ffffff 900px);
+} */
+
+/* Avoid white background below fold across app surfaces */
+/* Respect theme for global surfaces */
+body,
+.VPApp,
+.VPContent,
+.VPDoc,
+.VPHome,
+.VPFooter,
+.VPSidebar,
+.VPNav { background-color: var(--cl-bg) !important; }
+
+.VPFooter .container,
+.VPNavBar .container,
+.VPSidebar .container,
+.VPHome .container {
+  background: transparent !important;
+}
+
+/* ——— Stunning Home Hero ——— */
+.VPHome .VPHomeHero {
+  position: relative;
+  /* border-radius: 20px; */
+  overflow: hidden;
+  padding: 4rem 2rem;
+  background:
+    radial-gradient(1200px 600px at 10% -20%, color-mix(in oklab, var(--cl-secondary) 12%, transparent), color-mix(in oklab, var(--cl-primary) 10%, transparent) 40%, transparent 60%),
+    radial-gradient(1000px 500px at 110% 120%, color-mix(in oklab, var(--cl-accent) 10%, transparent), transparent 50%),
+    linear-gradient(180deg, var(--cl-bg) 0%, #ffffff 900px);
+}
+
+.VPHome .VPHomeHero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Abstract gradient layer adapts to theme */
+  background:
+    radial-gradient(900px 500px at 10% -10%, color-mix(in oklab, var(--cl-primary) 22%, transparent), transparent 60%),
+    radial-gradient(700px 400px at 110% 120%, color-mix(in oklab, var(--cl-secondary) 22%, transparent), transparent 55%);
+  background-attachment: fixed;
+  transform: scale(1.02);
+  z-index: 0;
+}
+
+.VPHome .VPHomeHero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Light overlay for day mode; dark mode overrides below */
+  /* background: linear-gradient(180deg, rgba(255,255,255,.65), rgba(255,255,255,.35) 40%, rgba(255,255,255,0)); */
+  backdrop-filter: blur(2px);
+  z-index: 1;
+  border-radius: none;
+}
+
+.VPHome .VPHomeHero .container,
+.VPHome .VPHomeHero .main,
+.VPHome .VPHomeHero .text,
+.VPHome .VPHomeHero .image {
+  position: relative;
+  z-index: 2;
+}
+
+.VPHome .VPHomeHero .name {
+  background: linear-gradient(92deg, var(--cl-primary), var(--cl-secondary) 45%, var(--cl-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: .5px;
+  text-shadow: 0 6px 28px rgba(34,211,238,.15);
+  animation: floatY 6s ease-in-out infinite;
+  margin-top: 3rem;
+}
+
+.VPHome .VPHomeHero .text {
+  color: color-mix(in oklab, var(--cl-text) 88%, #000 0%);
+  font-size: 1.15rem;
+}
+
+.VPHome .VPHomeHero .tagline {
+  color: color-mix(in oklab, var(--cl-text) 70%, #000 0%);
+}
+
+.VPHome .VPHomeHero .actions .VPButton {
+  position: relative;
+  overflow: hidden;
+  border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(34,211,238,.18), inset 0 0 0 1px rgba(255,255,255,.06);
+}
+
+.VPHome .VPHomeHero .actions .VPButton:hover::after {
+  transform: translateX(140%);
+}
+
+.VPHome .VPHomeHero .actions .VPButton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.22) 40%, transparent 70%);
+  transform: translateX(-140%);
+  transition: transform .8s ease;
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* ——— Glass Cards Grid ——— */
+.home-showcase {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 18px;
+}
+
+.home-card {
+  grid-column: span 12;
+  background: linear-gradient(180deg, color-mix(in oklab, var(--cl-surface) 100%, transparent), color-mix(in oklab, var(--cl-surface) 85%, transparent));
+  border: 1px solid color-mix(in oklab, var(--cl-text) 10%, transparent);
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.25);
+  transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+  display: block;
+  text-decoration: none;
+  color: var(--cl-text);
+}
+
+
+.home-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  border-color: rgba(167,139,250,.45);
+  box-shadow: 0 20px 40px rgba(167,139,250,.25);
+}
+
+.home-card .title {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  font-weight: 700;
+  color: var(--cl-text);
+}
+
+.home-card .title .emoji {
+  font-size: 1.4rem;
+}
+
+.home-card .desc {
+  color: color-mix(in oklab, var(--cl-text) 76%, #000 0%);
+  margin-top: .35rem;
+}
+
+@media (min-width: 720px) {
+  .home-card { grid-column: span 4; }
+}
+
+/* Ensure features section has contrast on dark canvas */
+.VPHome .VPHomeFeatures .items .item {
+  background: linear-gradient(180deg, color-mix(in oklab, var(--cl-surface) 100%, transparent), color-mix(in oklab, var(--cl-surface) 85%, transparent));
+  border: 1px solid color-mix(in oklab, var(--cl-text) 10%, transparent);
+  color: var(--cl-text);
+  box-shadow: 0 10px 26px rgba(0,0,0,.10);
+}
+
+.VPHome .VPHomeFeatures .items .item .title {
+  color: var(--cl-text);
+}
+
+.VPHome .VPHomeFeatures .items .item .details {
+  color: color-mix(in oklab, var(--cl-text) 78%, #000 0%);
+}
+
+/* Navbar text adapts to theme */
+.VPNavBar .title,
+.VPNavBar .menu .item,
+.VPNavBar .appearance .switch,
+.VPNavBar .social-links .icon { color: var(--cl-text) !important; fill: var(--cl-text) !important; }
+
+/* Hover/focus accents */
+.VPNavBar .menu .item:hover { color: var(--cl-primary) !important; }
+
+/* Dark-only overrides for strong contrast */
+.dark .VPHome,
+.dark body,
+.dark .VPApp,
+.dark .VPContent,
+.dark .VPDoc,
+.dark .VPFooter,
+.dark .VPSidebar,
+.dark .VPNav { background-color: var(--cl-bg) !important; }
+
+.dark .VPHome .VPHomeHero { background: radial-gradient(1200px 600px at 10% -20%, rgba(167,139,250,.25), rgba(34,211,238,.15) 40%, transparent 60%), radial-gradient(1000px 500px at 110% 120%, rgba(52,211,153,.18), transparent 50%), var(--cl-bg); }
+
+.dark .VPHome .VPHomeHero::after { background: linear-gradient(180deg, rgba(11,16,32,.55), rgba(11,16,32,.35) 40%, rgba(11,16,32,.75)); }
+
+.dark .VPHome .VPHomeHero .text { color: rgba(255,255,255,.88); }
+.dark .VPHome .VPHomeHero .tagline { color: rgba(255,255,255,.7); }
+.dark .home-card { background: linear-gradient(180deg, rgba(16,22,40,.85), rgba(10,14,28,.75)); border-color: rgba(255,255,255,.1); }
+.dark .home-card .title { color: #fff; }
+.dark .home-card .desc { color: rgba(255,255,255,.76); }
+.dark .VPHome .VPHomeFeatures .items .item { background: linear-gradient(180deg, rgba(16,22,40,.9), rgba(10,14,28,.8)); border-color: rgba(255,255,255,.08); color: rgba(255,255,255,.92); box-shadow: 0 10px 26px rgba(0,0,0,.25); }
+.dark .VPHome .VPHomeFeatures .items .item .title { color: #fff; }
+.dark .VPHome .VPHomeFeatures .items .item .details { color: rgba(255,255,255,.78); }
