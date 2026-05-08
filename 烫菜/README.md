@@ -2,10 +2,13 @@
 
 <!-- AUTO-GENERATED: index for 烫菜. Edit source files instead. -->
 
+- [白灼虾（8只）](./%E7%99%BD%E7%81%BC%E8%99%BE%EF%BC%888%E5%8F%AA%EF%BC%89.md)
 - [菠菜蛋皮丝](./%E8%8F%A0%E8%8F%9C%E8%9B%8B%E7%9A%AE%E4%B8%9D.md)
 - [葱油拌面](./%E8%91%B1%E6%B2%B9%E6%8B%8C%E9%9D%A2.md)
 - [葱油菜苔](./%E8%91%B1%E6%B2%B9%E8%8F%9C%E8%8B%94.md)
 - [葱油菜心](./%E8%91%B1%E6%B2%B9%E8%8F%9C%E5%BF%83.md)
+- [葱油青菜](./%E8%91%B1%E6%B2%B9%E9%9D%92%E8%8F%9C.md)
+- [葱油生菜](./%E8%91%B1%E6%B2%B9%E7%94%9F%E8%8F%9C.md)
 - [鸡汤娃娃菜](./%E9%B8%A1%E6%B1%A4%E5%A8%83%E5%A8%83%E8%8F%9C.md)
 - [浇汁西兰花](./%E6%B5%87%E6%B1%81%E8%A5%BF%E5%85%B0%E8%8A%B1.md)
 - [麻辣鸡块](./%E9%BA%BB%E8%BE%A3%E9%B8%A1%E5%9D%97.md)
