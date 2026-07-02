@@ -1,0 +1,4 @@
+interface:
+  display_name: "老乡鸡菜谱搜索"
+  short_description: "按菜名搜索老乡鸡菜谱 CookLikeHOC 网站，查找做法、配料与步骤"
+  default_prompt: "Use $cooklikehoc-recipe-search to search for a recipe by name on CookLikeHOC (cooklikehoc.soilzhu.su)"
