@@ -47,14 +47,18 @@
    ```bash
    cd CookLikeHOC
    ```
-
-3. 安装依赖
+3. 切换分支
+   ```bash
+   git checkout vitepress
+   ```
+   
+4. 安装依赖
 
    ```bash
    npm install
    ```
 
-4. 运行
+5. 运行
 
    ```bash
    npm run docs:dev

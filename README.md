@@ -10,6 +10,14 @@
 
 # 像老乡鸡那样做饭
 
+## 声明
+
+本仓库 **Gar-b-age/CookLikeHOC** 与网站 **cooklikehoc.com** **无任何关联**。
+
+**cooklikehoc.com** 不是本项目官方站点，也不是本仓库维护者运营的网站。网页内容（包括但不限于追踪器、广告、可能的非法网站跳转）不代表本仓库行为，也不受本仓库背书。
+
+仓库的唯一网页为： [**cooklikehoc.soilzhu.su**](https://cooklikehoc.soilzhu.su/) ，并承诺不会出现跨站追踪器、广告和其他牟利行为。
+
 ## 新更新
 
 已添加2026年发布的[《老乡鸡菜品溯源报告 2.0》](https://www.lxjchina.com.cn/info.php?class_id=102106)中新出现的菜品。
