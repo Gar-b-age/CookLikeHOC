@@ -3,6 +3,7 @@
 <!-- AUTO-GENERATED: index for 炖菜. Edit source files instead. -->
 
 - [白菜炖豆腐](./%E7%99%BD%E8%8F%9C%E7%82%96%E8%B1%86%E8%85%90.md)
+- [板栗烧鸡](./%E6%9D%BF%E6%A0%97%E7%83%A7%E9%B8%A1.md)
 - [红烧冬瓜](./%E7%BA%A2%E7%83%A7%E5%86%AC%E7%93%9C.md)
 - [红烧鱼块](./%E7%BA%A2%E7%83%A7%E9%B1%BC%E5%9D%97.md)
 - [鸡血汤](./%E9%B8%A1%E8%A1%80%E6%B1%A4.md)
