@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { generateNavAndSidebar } from './navSidebar.mjs'
+import { quantityMarkdownPlugin } from './quantity-markdown.mjs'
 
 const { nav, sidebar } = generateNavAndSidebar(process.cwd())
 
@@ -12,6 +13,11 @@ export default defineConfig({
   base: '/CookLikeHOC/',
   ignoreDeadLinks: true,
   srcExclude: ['**/README.md'],
+  markdown: {
+    config: (md) => {
+      md.use(quantityMarkdownPlugin)
+    },
+  },
   themeConfig: {
     logo: '/logo.png',
     nav: [
